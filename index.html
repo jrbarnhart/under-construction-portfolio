@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Under construction</title>
+<meta name="description" content="This site is being rebuilt. Check back soon.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚧</text></svg>">
+<style>
+  :root {
+    --bg: #f3f5f7;
+    --ink: #14202b;
+    --muted: #55636f;
+    --hazard: #f5b700;
+    --link: #0a66c2;
+    --card: #ffffff;
+    --line: #dde3e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10161c;
+      --ink: #eef2f5;
+      --muted: #9aa8b4;
+      --link: #6cb4ff;
+      --card: #18212a;
+      --line: #28333d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+  }
+  .tape {
+    height: 18px;
+    background: repeating-linear-gradient(-45deg, var(--hazard) 0 18px, #14202b 18px 36px);
+  }
+  main {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: clamp(1.5rem, 5vw, 4rem);
+  }
+  .panel {
+    width: 100%;
+    max-width: 38rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 1.25rem;
+    padding: clamp(1.75rem, 6vw, 3.5rem);
+  }
+  .sign {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #14202b;
+  }
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.25rem, 8vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+  }
+  p {
+    margin: 0 0 2rem;
+    max-width: 32rem;
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: var(--muted);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 999px;
+    background: var(--link);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(10, 102, 194, 0.3); }
+  .btn:focus-visible { outline: 3px solid var(--hazard); outline-offset: 3px; }
+  .btn svg { width: 1.2rem; height: 1.2rem; fill: currentColor; }
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+    .btn:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="tape" aria-hidden="true"></div>
+  <main>
+    <section class="panel">
+      <svg class="sign" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 6 60 56H4Z" fill="#f5b700" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M32 24v16" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="32" cy="48" r="3" fill="currentColor"/>
+      </svg>
+      <h1>Under construction</h1>
+      <p>This site is being rebuilt and will be back soon. In the meantime, you can find me on LinkedIn.</p>
+      <a class="btn" href="https://www.linkedin.com/in/joshuarbarnhart/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        Connect on LinkedIn
+      </a>
+    </section>
+  </main>
+  <div class="tape" aria-hidden="true"></div>
+</body>
+</html>
